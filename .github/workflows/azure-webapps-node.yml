@@ -1,93 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Your Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-
-    header {
-      background: #0077cc;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #222;
-      color: white;
-      margin-top: 2rem;
-    }
-
-    button {
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #005fa3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Links the CSS file -->
 </head>
 <body>
-  <header>
-    <h1>Welcome to Your Website</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>This is a great place to tell visitors about yourself or your business.</p>
-      <button id="alertBtn">Click me!</button>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById('alertBtn').addEventListener('click', () => {
-      alert('Hello! Thanks for visiting.');
-    });
-  </script>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! This is a simple website built with HTML, CSS, and JavaScript.</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/150" alt="Sample Image 1">
+                <img src="https://via.placeholder.com/150" alt="Sample Image 2">
+                <img src="https://via.placeholder.com/150" alt="Sample Image 3">
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+    <script src="script.js"></script> <!-- Links the JavaScript file -->
 </body>
 </html>
