@@ -1,101 +1,14 @@
-/* General Reset */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
 
-/* Header Styles */
-header {
-    background: #35495e;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
+    // Add event listener for form submission
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form from refreshing the page
+        const name = document.getElementById("name").value;
+        const message = document.getElementById("message").value;
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Main Content Styles */
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-.gallery {
-    display: flex;
-    gap: 10px;
-}
-
-.gallery img {
-    width: 150px;
-    height: 150px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-}
-
-/* Form Styles */
-form {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px 15px;
-    background: #35495e;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #506b8a;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #35495e;
-    color: #fff;
-    margin-top: 20px;
-}
+        // Simple alert to show the submitted data
+        alert(`Thank you, ${name}! Your message: "${message}" has been received.`);
+    });
+});
